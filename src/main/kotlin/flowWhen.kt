@@ -1,6 +1,6 @@
 fun operacao(a: Int, b: Int, c: String) {
 /*
-    when (c){
+     when (c){
         "Soma" -> return a + b
         "Subtração" -> {
             return a + b
