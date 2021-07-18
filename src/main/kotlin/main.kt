@@ -1,12 +1,23 @@
+fun media3(vararg notas: Float){
 
-fun endereco(rua: String = "", cidade: String, estado: String, cep: String, numero: Int = 0){
-    println("Rua= $rua")
-    println("Cidade: $cidade, $estado - $cep")
+    if (notas.isNotEmpty()){
+        var soma = 0f
+        for (nota in notas){
+            soma += nota
+        }
+        println("A média é: ${soma/notas.size}")
+    }
 }
 
+fun <T> media(vararg valores: T){
+    for (valor in valores){
+        println(valor)
+    }
+}
 
 fun main() {
-    endereco(cidade = "Campinas", estado = "São Paulo", cep = "13")
-    //endereco(cidade = "13", estado = "Campinas", cep = "São Paulo")
-    //endereco(cidade = "Campinas", estado = "São Paulo", cep = "13")
+    //media(10f, 8f)
+   // media(1f, 5f, 4f, 7f)
+
+    media(1, 4f, "", false, "", 'C')
 }
